@@ -2,6 +2,8 @@ package com.tutorial.npspring.app.mail;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Component;
 
 public class SmtpMailSender implements MailSender {
 	
