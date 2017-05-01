@@ -1,7 +1,8 @@
 package com.tutorial.npspring.app.controllers;
 
+import javax.mail.MessagingException;
+
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -18,7 +19,7 @@ public class MailController {
 	}
 	
 	@RequestMapping("/mail")
-	public String sendMail() {
+	public String sendMail() throws MessagingException {
 		mailSender.send("abc@example", "Some subject", "the content");
 		return "Mail sent";
 	}
