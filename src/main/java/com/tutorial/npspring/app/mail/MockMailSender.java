@@ -10,6 +10,7 @@ public class MockMailSender implements MailSender {
 	
 	@Override
 	public void send(String to, String subject, String body) {
+		log.info("mock");
 		log.info("Sending mail to: " + to);
 		log.info("Subject: " + subject);
 		log.info("Body: " + body);
